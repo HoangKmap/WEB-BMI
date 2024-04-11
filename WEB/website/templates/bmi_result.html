@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-eqiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        #wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px; 
+        }
+        
+        #header {
+            background-color: #87CEEB;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px; 
+        }
+        
+        #header h1 {
+            color: white;
+            margin: 0;
+            border-radius: 10px; 
+        }
+        
+        #main-content {
+            display: flex;
+            border-radius: 10px; 
+        }
+        
+        #content {
+            flex: 3;
+            border-radius: 10px; 
+            padding: 20px
+            background-color: #ffffff
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+        
+        #sidebar {
+            background-color: #FFA07A; 
+            padding: 20px;
+            float: right;
+            width: 20%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+        }
+        
+        .result-title {
+            text-align: center;
+            margin-bottom: 20px
+            color: black;
+            border-radius: 10px; 
+        }
+        
+        .result-value {
+            font-size: 24px;
+            border-radius: 10px; 
+        }
+        
+        #footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #87CEEB;
+            color: white;
+            border-radius: 10px; 
+        }
+        
+
+        @media screen and (max-width: 600px) {
+            #main-content {
+                flex-direction: column;
+            }
+            
+            #sidebar {
+                order: -1;
+                margin-top: 20px;
+            }
+        }
+
+
+    </style>
+        <div id ="wrapper">
+        <div id="header">
+            <h2>Nhóm1</h2>
+        </div>
+        <div id="main-content">
+            <div id="content">
+                
+                <h2 style="background-color:#87CEEB;">Tổng quan về Chỉ Số Khối Cơ Thể (BMI)<a name="tổng-quan-về-chỉ-số-khối-cơ-thể-bmi-1"></a></h2>
+                <p>Chỉ số Khối Cơ thể (BMI) là một thước đo đánh giá mức độ béo hoặc gầy của một cá nhân dựa trên cân nặng và chiều cao. Chỉ số này cũng có thể cung cấp thông tin về khối lượng mô trong cơ thể người. BMI giúp bạn đánh giá sự cân đối giữa trọng lượng và chiều cao.</p>
+                <p>Kết quả tính toán BMI cho biết một người thuộc nhóm béo phì, thừa cân, có cân nặng trung bình hay gầy. Các phân loại BMI đôi khi được chia thành từng nhóm nhỏ hơn nữa, chẳng hạn như rất gầy hoặc béo phì nghiêm trọng. Những phân loại này có thể khác nhau tùy theo các yếu tố như khu vực sinh sống và độ tuổi.</p>
+                <p>Béo phì hoặc suy dinh dưỡng có thể gây hậu quả nghiêm trọng cho sức khỏe. Mặc dù BMI không phải là thước đo hoàn hảo của cân nặng khỏe mạnh, nó là một chỉ số hữu ích để đánh giá xem có cần làm thêm các xét nghiệm hoặc thực hiện các biện pháp can thiệp hay không. Để biết thêm thông tin về cách phân loại và cách tính BMI, vui lòng tham khảo bảng dưới đây.</p>
+                <h2 style="background-color:#87CEEB;">Bảng phân loại BMI Người Trưởng Thành<a name="bảng-phân-loại-bmi-người-trưởng-thành-2"></a></h2>
+                <p>Bảng phân loại này được khuyến nghị bởi Tổ chức Y tế Thế giới (WHO) dựa trên chỉ số BMI của người trưởng thành (18 tuổi trở lên).</p>
+                <table>
+                <thead>
+                <tr>
+                <th style="background-color:#FFA07A">Phân Loại</th>
+                <th style="background-color:#FFA07A">Phạm vi BMI - kg/m2</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <table border="1">
+                        <tr>
+                        <th>Phân Loại</th>
+                        <th>Phạm vi BMI - kg/m2</th>
+                        </tr>
+                        <tr>
+                        <td>Gầy Độ III</td>
+                        <td>&lt; 16</td>
+                        </tr>
+                        <tr>
+                        <td>Gầy Độ II</td>
+                        <td>16 - 17</td>
+                        </tr>
+                        <tr>
+                        <td>Gầy Độ I</td>
+                        <td>17 - 18,5</td>
+                        </tr>
+                        <tr>
+                        <td>Bình Thường</td>
+                        <td>18,5 - 25</td>
+                        </tr>
+                        <tr>
+                        <td>Thừa Cân</td>
+                        <td>25 - 30</td>
+                        </tr>
+                        <tr>
+                        <td>Béo Phì Độ I</td>
+                        <td>30 - 35</td>
+                        </tr>
+                        <tr>
+                        <td>Béo Phì Độ II</td>
+                        <td>35 - 40</td>
+                        </tr>
+                        <tr>
+                        <td>Béo Phì Độ III</td>
+                        <td>&gt; 40</td>
+                        </tr>
+                    </table>
+                </tr>
+                </tbody>
+                </table>
+                <h2 style="background-color:#87CEEB;">Biểu đồ phân loại BMI Người Trưởng Thành<a name="biểu-đồ-phân-loại-bmi-người-trưởng-thành-3"></a></h2>
+                <p>Biểu đồ này hiển thị các phân loại BMI khác nhau dựa trên số liệu của Tổ chức Y tế Thế giới. Các đường nét liền thể hiện những phân loại chính, trong khi các đường nét đứt thể hiện các phân loại phụ.</p>
+                <img src="https://th.bing.com/th/id/OIF.m8FzAU7FDwu9Ys3rz7xlBg?rs=1&pid=ImgDetMain" width="529" height="441" class="scaleimg" alt="BMI categories">
+                <h2 style="background-color:#87CEEB;">Bảng phân loại BMI cho trẻ em và thanh thiếu niên từ 2 đến 20 tuổi<a name="bảng-phân-loại-bmi-cho-trẻ-em-và-thanh-thiếu-niên-từ-2-đến-20-tuổi-4"></a></h2>
+                <p>Trung tâm Kiểm Soát Và Phòng Ngừa Dịch Bệnh (CDC) khuyến nghị sử dụng chỉ số BMI để đánh giá sức khỏe của trẻ em và thanh thiếu niên từ 2 đến 20 tuổi..</p>
+                <table>
+                <thead>
+                <tr>
+                <th style="background-color:#FFA07A">Phân Loại</th>
+                <th style="background-color:#FFA07A">Phạm Vi Theo Tỷ Lệ Phần Trăm</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <table border="1">
+                        <tr>
+                        <th>Phân Loại</th>
+                        <th>Phạm vi BMI - kg/m2</th>
+                        </tr>
+                        <tr>
+                        <td>Gầy Độ III</td>
+                        <td>&lt; 16</td>
+                        </tr>
+                        <tr>
+                        <td>Gầy Độ II</td>
+                        <td>16 - 17</td>
+                        </tr>
+                        <tr>
+                        <td>Gầy Độ I</td>
+                        <td>17 - 18,5</td>
+                        </tr>
+                        <tr>
+                        <td>Bình Thường</td>
+                        <td>18,5 - 25</td>
+                        </tr>
+                        <tr>
+                        <td>Thừa Cân</td>
+                        <td>25 - 30</td>
+                        </tr>
+                        <tr>
+                        <td>Béo Phì Độ I</td>
+                        <td>30 - 35</td>
+                        </tr>
+                        <tr>
+                        <td>Béo Phì Độ II</td>
+                        <td>35 - 40</td>
+                        </tr>
+                        <tr>
+                        <td>Béo Phì Độ III</td>
+                        <td>&gt; 40</td>
+                        </tr>
+                        <tr>
+                        <td>Gầy</td>
+                        <td>&lt; 5%</td>
+                        </tr>
+                        <tr>
+                        <td>Cân nặng bình thường</td>
+                        <td>5% - 85%</td>
+                        </tr>
+                        <tr>
+                        <td>Có nguy cơ thừa cân</td>
+                        <td>85% - 95%</td>
+                        </tr>
+                        <tr>
+                        <td>Thừa cân</td>
+                        <td>&gt; 95%</td>
+                        </tr>
+                    </table>
+                </tbody>
+                </table>
+                <h2 style="background-color:#87CEEB;">Biểu đồ phân loại BMI cho trẻ em và thanh thiếu niên từ 2 đến 20 tuổi<a name="biểu-đồ-phân-loại-bmi-cho-trẻ-em-và-thanh-thiếu-niên-từ-2-đến-20-tuổi-5"></a></h2>
+                <p>CDC đã tạo ra các đồ thị thể hiện xu hướng tăng trong BMI liên quan đến mức tăng trưởng phần trăm theo độ tuổi.</p>
+                <p><a href="https://www.calculator.net/pdf/chart-2015.pdf">Biểu Đồ Cho Bé Trai</a></p>
+                <p><a href="https://www.calculator.net/pdf/chart-2016.pdf">Biểu Đồ Cho Bé Gái</a></p>
+                <h2 style="background-color:#87CEEB;">Những nguy cơ đối với sức khỏe của tình trạng thừa cân<a name="những-nguy-cơ-đối-với-sức-khỏe-của-tình-trạng-thừa-cân-6"></a></h2>
+                <p>Tình trạng thừa cân béo phì không chỉ làm ảnh hưởng đến vẻ ngoài mà còn tiềm ẩn nhiều nguy cơ nghiêm trọng cho sức khỏe. Theo Trung Tâm Kiểm Soát Và Phòng Ngừa Dịch Bệnh (CDC), thừa cân có thể dẫn đến:</p>
+                <img src="https://benhvientantao.com/wp-content/uploads/2022/11/beo-phi-bien-chung.png" width="400" height="300" class="scaleimg" alt="BMI categories" align="right" />
+                <ul>
+                <li>Tăng mức cholesterol LDL ("cholesterol xấu"), giảm mức cholesterol HDL ("cholesterol tốt") và tăng triglyceride, góp phần làm tăng nguy cơ mắc bệnh tim mạch;</li>
+                <li>Huyết áp cao;</li>
+                <li>Đái tháo đường tuýp 2;</li>
+                <li>Bệnh tim mạch vành (CAD);</li>
+                <li>Rối loạn chức năng túi mật;</li>
+                <li>Đột quỵ;</li>
+                <li>Các vấn đề về hô hấp và ngưng thở khi ngủ;</li>
+                <li>Viêm xương khớp (bệnh về khớp phát triển do sụn khớp bị phá hủy);</li>
+                <li>Chất lượng cuộc sống giảm sút;</li>
+                <li>Một số dạng ung thư (nội mạc tử cung, đại tràng, vú, gan, túi mật, thận, v.v.);</li>
+                <li>Những rối loạn tâm thần như trầm cảm, lo âu và các chứng bệnh về tâm thần khác;</li>
+                <li>Đau nhức cơ thể và gặp khó khăn trong sinh hoạt hàng ngày;</li>
+                <li>So với những người có chỉ số BMI bình thường, những người có BMI cao dễ có nguy cơ tử vong sớm hơn rất nhiều.</li>
+                </ul>
+                <p>Thừa cân và béo phì là những vấn đề sức khỏe nghiêm trọng và cần phải được chú trọng khắc phục. Duy trì cân nặng khỏe mạnh (BMI dưới 25 kg/m²) là rất quan trọng để phòng ngừa các bệnh lý nói trên. Nếu bạn đang thừa cân hoặc béo phì, hãy tham khảo ý kiến bác sĩ để xây dựng chế độ ăn uống và tập luyện phù hợp nhằm cải thiện sức khỏe của mình.</p>
+                <h2 style="background-color:#87CEEB;">Những nguy cơ đối với sức khỏe của tình trạng gầy còm<a name="những-nguy-cơ-đối-với-sức-khỏe-của-tình-trạng-gầy-còm-7"></a></h2>
+                <p>Tình trạng gầy còm có thể dẫn đến một số vấn đề sức khỏe đáng lo ngại, bao gồm:</p>
+                <ul>
+                <li>Suy dinh dưỡng, thiếu máu và thiếu vitamin dẫn đến giảm khả năng vận chuyển oxy của máu trong cơ thể;</li>
+                <li>Loãng xương làm giảm khối lượng xương, tăng nguy cơ gãy xương;</li>
+                <li>Suy giảm chức năng hệ miễn dịch;</li>
+                <li>Rối loạn tăng trưởng và phát triển, đặc biệt ảnh hưởng đến trẻ em và thanh thiếu niên;</li>
+                <li>Có nguy cơ cao gặp biến chứng sau phẫu thuật;</li>
+                <li>Gây mất cân bằng nội tiết tố, dẫn đến rối loạn kinh nguyệt, vô kinh hoặc khó mang thai;</li>
+                <li>Tỷ lệ tử vong cao hơn.</li>
+                </ul>
+                <p>Giảm cân đột ngột hoặc không rõ nguyên nhân có thể là dấu hiệu của các bệnh lý nghiêm trọng tiềm ẩn, chẳng hạn như rối loạn ăn uống thần kinh như chứng chán ăn. Nếu bạn hoặc người thân đang gặp vấn đề về cân nặng và không tìm được nguyên nhân rõ ràng, hãy tham khảo ý kiến bác sĩ để được chẩn đoán và điều trị kịp thời.</p>
+                <h2 style="background-color:#87CEEB;">Những Giới Hạn Của BMI<a name="những-giới-hạn-của-bmi-8"></a></h2>
+                <p>Mặc dù được sử dụng rộng rãi như một công cụ dự báo trọng lượng cơ thể khỏe mạnh đáng tin cậy, Chỉ số Khối Cơ thể (BMI) vẫn có một số hạn chế. Điểm hạn chế ở đây chính là không tính đến toàn bộ thành phần cơ thể. Sự đa dạng về kiểu dáng cơ thể và sự phân bố của mỡ, cơ và khối lượng xương khiến việc sử dụng BMI không thôi là chưa đủ. Các chỉ số khác cần được kết hợp sử dụng để đánh giá một cách chính xác hơn.</p>
+                <h3>Ở người trưởng thành:<a name="ở-người-trưởng-thành-9"></a></h3>
+                <p>Các trình máy tính online cung cấp ước tính chung về BMI dựa trên chiều cao và cân nặng, nhưng chúng không tính đến các yếu tố cụ thể có thể ảnh hưởng đến độ chính xác của nó. BMI không phân biệt giữa trọng lượng từ cơ và trọng lượng từ mỡ, vì vậy nó không phải là thước đo trực tiếp của lượng mỡ trong cơ thể. Ngoài ra, các yếu tố khác như tuổi, giới tính, chủng tộc, khối lượng cơ, mức độ tập luyện và một số yếu tố khác có thể ảnh hưởng đến kết quả đo BMI và cách giải thích kết quả.</p>
+                <p>Lấy ví dụ về một người lớn tuổi ít vận động. Mặc dù người này có lượng mỡ thừa rất nhiều nhưng nhìn chung lại không bị thừa cân. Xét về sức khỏe khách quan, người này có thể không thực sự khỏe mạnh, nhưng xét về BMI, họ lại nằm trong phạm vi cho thấy sức khỏe bình thường.</p>
+                <p>Ngược lại, ở những người tập thể hình sở hữu khối cơ phát triển, cơ bắp nặng hơn mỡ nhưng lại chiếm ít thể tích hơn. Xét theo BMI, nhiều vận động viên thể hình có thể ở gần hoặc vượt quá giới hạn cân nặng bình thường. Tuy nhiên, sức khỏe của họ vẫn rất tốt. Một người có thể trông thon gọn hơn nhưng vẫn nặng hơn khi đã sở hữu khối lượng cơ săn chắc.</p>
+                <p>Theo dữ liệu từ CDC (Trung Tâm Kiểm Soát và Phòng Ngừa Dịch Bệnh):</p>
+                <ul>
+                <li>Ở cùng mức BMI, phụ nữ thường có lượng mỡ trong cơ thể cao hơn nam giới;</li>
+                <li>Người lớn tuổi thường có lượng mỡ trong cơ thể cao hơn người trẻ tuổi thuộc cùng mức BMI;</li>
+                <li>Các vận động viên tập luyện cường độ cao có thể có BMI cao hơn do khối cơ lớn.</li>
+                </ul>
+                <h3 style="background-color:#87CEEB;">Ở trẻ em và thanh thiếu niên:<a name="ở-trẻ-em-và-thanh-thiếu-niên-10"></a></h3>
+                <p>Các biến số tương tự ảnh hưởng đến hiệu quả của BMI ở người lớn cũng ứng với trẻ vị thành niên và thậm chí cả trẻ em. Chiều cao và mức độ phát triển giới tính có thể ảnh hưởng đến BMI và tỷ lệ mỡ trên cơ thể.</p>
+                <p>Ở trẻ em béo phì, BMI là một yếu tố dự báo mạnh hơn về lượng mỡ thừa so với trẻ em thừa cân. BMI của trẻ có thể xuất phát từ khối mỡ cao hoặc khối không mỡ (tất cả các thành phần cơ thể khác ngoài mỡ như nước, các cơ quan, cơ bắp, v.v.) cao. Ở trẻ gầy, sự khác biệt về BMI cũng có thể do khối không mỡ gây ra.</p>
+                <p>Đối với dân số nói chung, BMI có thể là một chỉ báo hữu ích về các nguy cơ sức khỏe tiềm ẩn liên quan đến tình trạng gầy còm, thừa cân hoặc béo phì. Tuy nhiên, do còn tồn tại nhiều hạn chế, BMI chỉ nên được sử dụng như một trong nhiều công cụ phổ quát để đánh giá sức khỏe và trọng lượng cơ thể. Để có kết quả đánh giá sức khỏe chuẩn xác hơn, hãy thường xuyên kết hợp BMI với các đánh giá và kiểm tra sức khỏe cá nhân hóa khác.</p>
+        
+            </div>
+            <div id="sidebar">
+                <h1 class="result-title">BMI Result</h1>
+        <p class="result-value">Your BMI is: {{ bmi }}</p>
+            <img src="https://res.cloudinary.com/grohealth/image/upload/$wpsize_!_cld_full!,w_2560,h_1707,c_scale/v1588092257/iStock-528072248-scaled.jpg" alt="Image Description" style="max-width: 100%; height: auto;">
+        </div>
+        </div>
+        <div id="footer">
+            <div id="footer">
+                <p>Created by Nguyễn Trọng Hoàng</p>
+                <p>Liên hệ: xxxxxxxx</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
